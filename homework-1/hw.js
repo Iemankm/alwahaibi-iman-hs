@@ -1,28 +1,5 @@
-function child(items) {
-  space = blank.repeat(count);
-  items.forEach((el) => {
-    console.log(space + blank + "└──", el.name);
-    if (Array.isArray(el.items)) {
-      count += 1;
-      child(el.items);
-    }
-  });
-}
-function inside(items) {
-  res = items.forEach((el) => {
-    console.log("├──", el.name);
-    child(el.items);
-  });
-}
-function acTree(nodes, parent) {
-  if (Array.isArray(nodes.items)) {
-    console.log(parent);
-    inside(nodes.items);
-  }
-}
+const blank = "   ";
 
-let count = 0;
-const blank = "    ";
 const tree = {
   name: 1,
   items: [
@@ -52,4 +29,18 @@ const tree = {
   ],
 };
 
-acTree(tree, tree.name);
+acTree(tree);
+
+function acTree(root, depth = 0) {
+  if (depth > 0) {
+    console.log(blank.repeat(depth - 1) + "└──" + root.name);
+  } else {
+    console.log(root.name);
+  }
+
+  if (Array.isArray(root.items)) {
+    root.items.forEach((item) => {
+      acTree(item, depth + 1);
+    });
+  }
+}
