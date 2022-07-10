@@ -37,7 +37,7 @@ router.route('/edit/:id').get(async(req:Request,res:Response)=>{
     const {id} = req.params;
     const {title,Blog} = req.body;
    await blogs.findByIdAndUpdate(id,{title,Blog}).lean();
-   res.redirect('blogs/list');
+   res.redirect('/blogs/list');
 });
 
 
