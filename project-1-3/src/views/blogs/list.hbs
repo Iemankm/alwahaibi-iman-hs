@@ -1,20 +1,18 @@
 <div class="row">
-  {{#each blogs}}
+  {{#each bblogs }}
   <div class="col-md-3">
     <div class="card">
         <div class="card-body">
-            <h3>{{blogs.title}}</h3>
-            <p>{{blogs.Blog}}</p>
+            <h3>{{title}}</h3>
+            <p>{{Blog}}</p>
         </div>
         <div class="card-footer d-flex justify-content-between align-items-center">
-            <a href="/blogs/edit/{{blogs._id}}" class="btn btn-secondary">
+            <a href="/blogs/edit/{{_id}}" class="btn btn-secondary">
                 Edit
             </a>
-            <a href="/tasks/delete/{{blogs._id}}" class="btn btn-danger">
+            <a href="/blogs/delete/{{_id}}" class="btn btn-danger">
                 Delete
             </a>
-           
-
         </div>
     </div>
   </div>

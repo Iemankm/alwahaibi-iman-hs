@@ -12,4 +12,5 @@ const blogSchema = new Schema({
     }
 })
 
-export default model('blogs',blogSchema) 
+export default model('blogs',blogSchema,) 
+

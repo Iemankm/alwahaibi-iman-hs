@@ -2,13 +2,13 @@
     <div class="col-md-4 offset-md-4" >
        <div class="card">
         <div class="card-body">
-            <form action="/blogs/edit/{{blogs._id}}" method="POST">
+            <form action="/blogs/edit/{{bblogs._id}}" method="POST">
             <div class="form-group">
-                <input type="text" value="{{blogs.title}}" name="title"  placeholder="Add title" class="form-control" autofocus>
+                <input type="text" value="{{bblogs.title}}" name="title"  placeholder="Add title" class="form-control" autofocus>
             </div>
             <div class="form-group">
-                <textarea type="text" value="{{blogs.Blog}}" name="Blog" placeholder="Write your blog here!" class="form-control">
-           </textarea> </div>
+                <input type="text" value="{{bblogs.Blog}}" name="Blog" placeholder="Write your blog here!" class="form-control">
+             </div>
             <button type="submit" class="btn btn-success btn-block">
                 publish
             </button>
